@@ -1,8 +1,4 @@
-"""
-SSH Brute force attack
-Creator: ju_dev
-"""
-from lib.authentication import Authentication
+from pyforce import Authentication
 
 from string import ascii_letters, digits
 from random import choice
@@ -23,7 +19,7 @@ def try_to_login():
     stdin, stdout, stderr = client.exec_command("hostname")
     
     # Debuging infos about the test command
-    auth.debug_info(stdin, stdout, stderr)
+    auth.debug_info(stdout, stderr)
         
     stdin.close()
     stdout.close()
