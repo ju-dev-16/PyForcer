@@ -1,7 +1,7 @@
 from paramiko import SSHClient, AutoAddPolicy
 from paramiko.ssh_exception import AuthenticationException
 
-class Authentication:
+class SSHAuthentication:
     def __init__(self, client: SSHClient, known_hosts_path: str):
         self.__client = client
 
@@ -10,12 +10,12 @@ class Authentication:
 
         self.__client.set_missing_host_key_policy(AutoAddPolicy())
 
-    def ssh_login(self, hostname: str, username: str, password: str):
+    def login(self, hostname: str, username: str, password: str):
         try:
             self.__client.connect(hostname=hostname, username=username, password=password)
         except AuthenticationException:
-            self.ssh_login(hostname, username, password)  
             print("Authentication failed.")
+            self.login(hostname, username, password)  
     
     def debug_info(self, stdout, stderr):
         print(f"STDOUT: {stdout.read().decode('utf8')}")

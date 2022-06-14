@@ -1,5 +1,7 @@
-from .authentication import Authentication
+from .ssh_authentication import SSHAuthentication
+from .guesser import Guesser
 
 __all__ = [
-    Authentication
+    SSHAuthentication,
+    Guesser
 ]
