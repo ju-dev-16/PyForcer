@@ -1,7 +1,4 @@
-from pyforce import SSHAuthentication
-
-from string import ascii_letters, digits
-from random import choice
+from pyforce import SSHAuthentication, Guess
 
 from paramiko import SSHClient
 
@@ -11,9 +8,10 @@ client = SSHClient()
 ssh_auth = SSHAuthentication(client, known_hosts_path="C:\\Users\\JuDEV\\.ssh\\known_hosts")
 
 def try_to_login():  
-    password = ''.join(choice(ascii_letters + digits) for _ in range(8))
-
-    # Put the known and guessed informations here
+    # Guess password by a random string
+    password = Guess().by_random_string(length=8)
+    
+    # Put the known and guessed data here
     ssh_auth.login(hostname="localhost", username="root", password=password)
     
     stdin, stdout, stderr = client.exec_command("hostname")
