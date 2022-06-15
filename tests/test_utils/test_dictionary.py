@@ -3,4 +3,4 @@ path.append('.')
 
 from utils import Dictionary
 
-Dictionary('https://nordpass.com/de/most-common-passwords-list')
+Dictionary('https://github.com/danielmiessler/SecLists/blob/master/Passwords/2020-200_most_used_passwords.txt')

@@ -1,7 +1,7 @@
 from .ssh_authentication import SSHAuthentication
-from .guess import Guess
+from .guess_password_by import GuessPasswordBy
 
 __all__ = [
     SSHAuthentication,
-    Guess
+    GuessPasswordBy
 ]

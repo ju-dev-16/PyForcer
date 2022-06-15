@@ -1,16 +1,16 @@
 from sys import path
 path.append('.')
 
-from pyforce import SSHAuthentication, Guess
-
 from paramiko import SSHClient
+
+from pyforce import SSHAuthentication, GuessPasswordBy
 
 client = SSHClient()
 
 ssh_auth = SSHAuthentication(client, known_hosts_path='C:\\Users\\JuDEV\\.ssh\\known_hosts')
 
 def try_to_login() -> None:  
-    password = Guess().by_random_string(length=8)
+    password = GuessPasswordBy().random_password(length=8)
     
     ssh_auth.login(hostname='192.168.0.192', username='pi', password=password)
     
