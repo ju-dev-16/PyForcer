@@ -3,6 +3,7 @@ path.append('.')
 
 from pyforce import GuessPasswordBy
 
-# print(GuessPasswordBy().random_password(length=8))
+print(GuessPasswordBy().random_password(length=8))
 
-print(GuessPasswordBy().dictionary())
+for password in GuessPasswordBy().dictionary():
+    print(password)
