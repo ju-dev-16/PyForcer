@@ -12,11 +12,11 @@ ssh_auth = SSHAuthentication()
 - known_hosts_path: str 
 ### Methods
 - login
--- usage: Connect you everytime again with the server on a AuthenticationException from paramiko.ssh
--- params: hostname: str, username: str, password: str
+--- usage: Connect you everytime again with the server on a AuthenticationException from paramiko.ssh
+--- params: hostname: str, username: str, password: str
 - debug_info
--- usage: Writes stdout, stderr and the return code formatted
--- params: stdout, stderr from client.exec_command(command)
+--- usage: Writes stdout, stderr and the return code formatted
+--- params: stdout, stderr from client.exec_command(command)
 
 ## How to implement
 ```python
