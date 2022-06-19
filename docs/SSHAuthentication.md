@@ -11,12 +11,6 @@ ssh_auth = SSHAuthentication()
 - client: SSHClient
 - known_hosts_path: str
 ### Methods
-- login
--- usage: Connect you everytime again with the server on different exceptions from paramiko.ssh_exception
--- params: hostname: str, username: str, password: str
-- debug_info
--- usage: Writes stdout, stderr and the return code formatted
--- params: stdout, stderr from client.exec_command(command)
 - **login**
 > - **usage**: Connect you everytime again with the server on a AuthenticationException from paramiko.ssh
 > - **params**: hostname: str, username: str, password: str
