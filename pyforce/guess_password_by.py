@@ -7,7 +7,7 @@ from random import choice
 from utils import Dictionary
 
 class GuessPasswordBy: 
-    def random_string(self, length: int) -> str:
+    def random_string(self, length: int = 8) -> str:
         return ''.join(choice(ascii_letters + digits) for _ in range(length + 1))
     
     def dictionary(self) -> str:

@@ -9,19 +9,19 @@ pw_guesser = GuessPasswordBy()
 ```
 ### Methods
 - random_string
--- usage: 
--- params: 
+-- usage: Returns a random generated string
+-- params: length: int
 - dictionary
--- usage: 
--- params: 
+-- usage: Returns a list of the most 200 common passwords
+-- params: /
 ## How to implement
 ### random_string
 ```python
-password = GuessPasswordBy().random_string(length=8)
+password = pw_guesser.random_string(length=8)
 ssh_auth.login(hostname="localhost", username="root", password=password)
 ```
 ### dictionary
 ```python
-for password in GuessPasswordBy.dictionary():
+for password in pw_guesser.dictionary():
 	ssh_auth.login(hostname="localhost", username="root", password=password)
 ```

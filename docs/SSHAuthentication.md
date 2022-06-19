@@ -1,4 +1,3 @@
-
 # SSH Authentication
 ## Import
 ```python
@@ -18,6 +17,12 @@ ssh_auth = SSHAuthentication()
 - debug_info
 -- usage: Writes stdout, stderr and the return code formatted
 -- params: stdout, stderr from client.exec_command(command)
+- **login**
+> - **usage**: Connect you everytime again with the server on a AuthenticationException from paramiko.ssh
+> - **params**: hostname: str, username: str, password: str
+- **debug_info**
+> - **usage**: Writes stdout, stderr and the return code formatted
+> - **params**: stdout, stderr from client.exec_command(command)
 ## How to implement
 ```python
 from paramiko import SSHClient
