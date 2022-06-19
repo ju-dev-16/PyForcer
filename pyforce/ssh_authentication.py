@@ -1,5 +1,5 @@
 from paramiko import SSHClient, AutoAddPolicy
-from paramiko.ssh_exception import AuthenticationException
+from paramiko.ssh_exception import SSHException, AuthenticationException
 
 class SSHAuthentication:
     def __init__(self, client: SSHClient, known_hosts_path: str) -> None:
@@ -13,6 +13,9 @@ class SSHAuthentication:
     def login(self, hostname: str, username: str, password: str) -> None:
         try:
             self.__client.connect(hostname=hostname, username=username, password=password)
+        except SSHException:
+            print('Error connecting or establishing an SSH session.')
+            self.login(hostname, username, password)
         except AuthenticationException:
             print('Authentication failed.')
             self.login(hostname, username, password)  
