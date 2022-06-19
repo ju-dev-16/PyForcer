@@ -11,7 +11,7 @@ pw_guesser = GuessPasswordBy()
 - **random_string**
 > - **usage**: Returns a random generated string
 > - **params**: length: int
-- dictionary
+- **dictionary**
 > - **usage**: Returns a list of the most 200 common passwords
 > - **params**: /
 ## How to implement
@@ -23,5 +23,5 @@ ssh_auth.login(hostname="localhost", username="root", password=password)
 ### dictionary
 ```python
 for password in pw_guesser.dictionary():
-ssh_auth.login(hostname="localhost", username="root", password=password)
+  ssh_auth.login(hostname="localhost", username="root", password=password)
 ```

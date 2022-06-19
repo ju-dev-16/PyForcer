@@ -29,20 +29,20 @@ client = SSHClient()
 ssh_auth = SSHAuthentication(client, known_hosts_path="C:\\Users\\USERNAME\\.ssh\\known_hosts")
 
 def try_to_login():
-	# Choose a method to guess the password
-	password = ''.join(choice(ascii_letters + digits) for _ in  range(8 + 1))
+  # Choose a method to guess the password
+  password = ''.join(choice(ascii_letters + digits) for _ in  range(8 + 1))
 
-	# Put the known and guessed data here
-	ssh_auth.login(hostname="localhost", username="root", password=password)
+  # Put the known and guessed data here
+  ssh_auth.login(hostname="localhost", username="root", password=password)
 
-	stdin, stdout, stderr = client.exec_command("hostname")
+  stdin, stdout, stderr = client.exec_command("hostname")
 
-	# Debugging infos about the test command
-	ssh_auth.debug_info(stdout, stderr)
-
-	stdin.close()
-	stdout.close()
-	stderr.close()
+  # Debugging infos about the test command
+  ssh_auth.debug_info(stdout, stderr)
+ 
+  stdin.close()
+  stdout.close()
+  stderr.close()
 
 try_to_login()
 
