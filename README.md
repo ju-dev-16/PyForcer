@@ -5,7 +5,7 @@ This library is not build for illegal activities. You have to make sure that all
 
 ## 📥 Installation
 ```
-$ pip install pyforcer
+$ pip install py-forcer
 ```
 
 ## 📄 Docs
