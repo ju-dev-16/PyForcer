@@ -3,7 +3,7 @@ path.append('.')
 
 from paramiko import SSHClient
 
-from pyforce import SSHAuthentication, GuessPasswordBy
+from pyforcer import SSHAuthentication, GuessPasswordBy
 
 client = SSHClient()
 

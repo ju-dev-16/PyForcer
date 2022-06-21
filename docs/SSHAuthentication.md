@@ -1,7 +1,7 @@
 # SSH Authentication
 ## Import
 ```python
-from pyforce import SSHAuthentication
+from pyforcer import SSHAuthentication
 ```
 ## Instance
 ```python

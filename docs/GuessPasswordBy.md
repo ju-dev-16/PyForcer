@@ -1,7 +1,7 @@
 # Guess password by
 ## Import
 ```python
-from pyforce import GuessPasswordBy
+from pyforcer import GuessPasswordBy
 ```
 ## Instance
 ```python
@@ -23,5 +23,5 @@ ssh_auth.login(hostname="localhost", username="root", password=password)
 ### dictionary
 ```python
 for password in pw_guesser.dictionary():
-  ssh_auth.login(hostname="localhost", username="root", password=password)
+    ssh_auth.login(hostname="localhost", username="root", password=password)
 ```
