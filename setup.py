@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
  
 classifiers = [
   'Development Status :: 5 - Production/Stable',
@@ -10,7 +10,7 @@ classifiers = [
  
 setup(
   name='py-forcer',
-  version='0.0.2',
+  version='0.0.3',
   description='A library to use Brute Force methods',
   long_description=open('README.md', encoding='utf-8').read() + '\n\n' + open('CHANGELOG.txt', encoding='utf-8').read(),
   url='https://github.com/ju-dev-16',  
@@ -19,6 +19,6 @@ setup(
   license='MIT', 
   classifiers=classifiers,
   keywords='brute force passwords dictionary ssh login', 
-  packages=['pyforcer'],
+  packages=find_packages(),
   install_requires=['bs4', 'paramiko'] 
 )
