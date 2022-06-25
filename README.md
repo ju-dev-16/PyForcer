@@ -1,7 +1,12 @@
-# Forcer
+# PyForcer
 
 ## ⛔ Disclaimer
 This library is not build for illegal activities. You have to make sure that all activities you do are legal. If your intentions are not correct, I ask you to not use this library. The only compatible library is paramiko.
+
+## 📥 Installation
+```shell
+pip install forcer
+```
 
 ## 📄 Docs
 - **[SSHAuthentication](https://github.com/ju-dev-16/PyForce-Library/blob/main/docs/SSHAuthentication.md)**
