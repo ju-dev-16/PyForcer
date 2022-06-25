@@ -9,8 +9,8 @@ classifiers = [
 ]
  
 setup(
-  name='py-forcer',
-  version='0.0.3',
+  name='forcer',
+  version='0.0.1',
   description='A library to use Brute Force methods',
   long_description=open('README.md', encoding='utf-8').read() + '\n\n' + open('CHANGELOG.txt', encoding='utf-8').read(),
   url='https://github.com/ju-dev-16',  

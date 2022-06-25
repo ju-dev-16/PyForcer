@@ -3,4 +3,4 @@ Change log
 
 0.0.1 (25/06/2022)
 ------------------
-- Release on Github
+- First release
